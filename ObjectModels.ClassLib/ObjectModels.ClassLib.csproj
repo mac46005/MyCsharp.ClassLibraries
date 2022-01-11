@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>F:\PROGRAMMING\CSHARP\DLLs\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Abstact\" />
+    <Folder Include="Interface\NewFolder\" />
+    <Folder Include="Models\PersonInformationModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DataManipulation.ClassLib\DataManipulation.ClassLib.csproj" />
+  </ItemGroup>
+
+</Project>
