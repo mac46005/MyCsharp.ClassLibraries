@@ -21,7 +21,8 @@ namespace ConsoleUI
 4,
 7,
 6};
-            List<decimal> dataSetDecimal = new List<decimal> { 2,3,0,3};
+            List<decimal> dataSetDecimal = new List<decimal> { 2,3,0,3
+            };
             dataSetDouble.Sort();
             dataSetDecimal.Sort();
 
