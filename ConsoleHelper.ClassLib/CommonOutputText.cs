@@ -9,7 +9,7 @@ namespace ConsoleHelper.ClassLib
     public class CommonOutputText
     {
         public static void Heading(string content){
-            
+
         }
 
     }
