@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Probability_Statistics_Helper.ClassLib.Classes
 {
-    public class Quartile
+    public class BoxPlot
     {
 
         private List<double> _dataSet;
 
-        public Quartile(List<double> dataSet)
+        public BoxPlot(List<double> dataSet)
         {
             dataSet.Sort();
             _dataSet = dataSet;
@@ -39,12 +39,12 @@ namespace Probability_Statistics_Helper.ClassLib.Classes
 
 
             int length = dataSet.Count;
-            double mid_D = (length / 2);
+            decimal mid_D = (decimal)((decimal)length / 2);
             int mid_I = length / 2;
 
 
 
-            if ((double)mid_I == mid_D)
+            if ((decimal)mid_I == mid_D)
             {
                 double o1 = dataSet[mid_I - 1];
                 double o2 = dataSet[mid_I];
@@ -76,7 +76,7 @@ namespace Probability_Statistics_Helper.ClassLib.Classes
         {
             Console.WriteLine($"Interpretation:\n25% less than {Q1};\n25% between {Q1} - {Q2};\n25% between {Q2} - {Q3};\n25% - 100% is greater than {Q3}");
         }
-
+        
         public void PrintResult()
         {
             Console.WriteLine("Quartile\n");
@@ -87,7 +87,7 @@ namespace Probability_Statistics_Helper.ClassLib.Classes
             Console.WriteLine($"Q1:{Q1}\nQ2:{Q2}\nQ3:{Q3}\n\nIQR:{IQR} <= Represents 50% of average data\n\n\n");
             Interpretation();
             Console.WriteLine($"\nFive Number Summary: {_dataSet[0]},{Q1},{Q2},{Q3},{_dataSet[_dataSet.Count - 1]}");
-            
+            Console.WriteLine($"Variation:\nMin-Q1={Q1 - _dataSet[0]}\nQ2-Q1={Q2 - Q1}\nQ3-Q2={Q3 - Q2}\nMax-Q3={_dataSet[_dataSet.Count - 1] - Q3}");
             
             
             Outliers();

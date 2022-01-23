@@ -25,24 +25,12 @@ namespace Probability_Statistics_Helper.ClassLib.Classes
             /// </summary>
             /// <param name="dataSet">Collection of data</param>
             /// <returns>(SumOfDataSet/DataSet.Length)</returns>
-            public static decimal Mean(decimal[] dataSet)
+            public static decimal Mean(List<decimal> dataSet)
             {
-                //Not necessary...
-                Array.Sort(dataSet);
-
-
-                decimal result = 0;
-                decimal total = dataSet.Sum();
-
-                //Simple addition of all items in the array
-                foreach (decimal data in dataSet)
-                {
-                    total += data;
-                }
-
-                result = total / dataSet.Length;
-
-                return result;
+                decimal sum = dataSet.Sum();
+                decimal meanResult = sum / dataSet.Count;
+                return meanResult;
+                
             }
 
 
@@ -76,7 +64,7 @@ namespace Probability_Statistics_Helper.ClassLib.Classes
                 decimal result = 0;
 
                 if(middle.Length > 1){
-                    result = Mean(middle);
+                    result = Mean(middle.ToList());
                 }
                 else{
                     result = middle[0];
@@ -159,7 +147,7 @@ namespace Probability_Statistics_Helper.ClassLib.Classes
             Array.Sort(dataSet);
 
             //Find the mean of the dataSet
-            decimal mean = MeasuresOfCenter.Mean(dataSet);
+            decimal mean = MeasuresOfCenter.Mean(dataSet.ToList());
 
             //Find deviation for each dataset
             decimal[] deviationArray = new decimal[dataSet.Length];
