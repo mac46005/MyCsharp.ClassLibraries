@@ -9,24 +9,26 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            List<double> dataSetDouble = new List<double> { 4,
-7,
-3,
-2,
-10,
-0,
-1,
-5,
-6,
-4,
-7,
-6};
-            List<decimal> dataSetDecimal = new List<decimal> { 2,3,0,3
+            List<decimal> dataSet = new List<decimal>{
+                .495m,.225m,.024m,.025m,.231m
             };
-            dataSetDouble.Sort();
-            dataSetDecimal.Sort();
 
 
+            /// <summary>
+            /// 
+            /// P = f / N
+            /// 
+            /// </summary>
+            /// <returns></returns>
+            decimal sum = dataSet.Sum();
+
+            decimal women = 76;
+            decimal total = 95;
+
+            
+
+
+            Console.WriteLine(SimpleProbabilityHelper.SolveForP((.231m+.495m),sum));
 
 
 
@@ -57,16 +59,15 @@ namespace ConsoleUI
             //boxPlot.PrintResult();
 
 
-            DescriptiveMeasuresForPopulation descriptiveMeasuresForPopulation = new DescriptiveMeasuresForPopulation(dataSetDecimal);
-            descriptiveMeasuresForPopulation.PopulationMean();
-            descriptiveMeasuresForPopulation.FinitePopulationStandardDeviation();
+            // DescriptiveMeasuresForPopulation descriptiveMeasuresForPopulation = new DescriptiveMeasuresForPopulation(dataSetDecimal);
+            // descriptiveMeasuresForPopulation.PopulationMean();
+            // descriptiveMeasuresForPopulation.FinitePopulationStandardDeviation();
 
             Console.ReadKey();
         }
-
-
+        public static decimal Divide(decimal x,decimal y) => x/y;
         public static decimal Middle(decimal x, decimal y) => (decimal)((x + y) / 2);
 
-
+        
     }
 }
