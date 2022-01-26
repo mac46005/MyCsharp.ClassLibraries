@@ -6,7 +6,7 @@ namespace Probability_Statistics_Helper.ClassLib.Classes{
     public class SimpleProbabilityHelper{
 
 
-        
+
         /// <summary>
         /// Probability = f / N
         /// </summary>
@@ -36,5 +36,24 @@ namespace Probability_Statistics_Helper.ClassLib.Classes{
         public static decimal SolveForN(decimal probability,decimal f){
             return probability / f;
         }
+
+        public static decimal ComplementationRule(decimal NOT_E){
+            return 1 - NOT_E;
+        }
+
+
+        /// <summary>
+        /// P(A OR B) = P(A) + P(B) - P(A & B)
+        /// </summary>
+        /// <param name="A"></param>
+        /// <param name="B"></param>
+        /// <returns></returns>
+        public static decimal GeneralAdditionRule(decimal A,decimal B){
+            return (A + B) - (A * B);
+        }
+
+        
+
+
     }
 }

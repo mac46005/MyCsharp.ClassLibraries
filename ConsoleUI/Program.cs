@@ -28,7 +28,7 @@ namespace ConsoleUI
             
 
 
-            Console.WriteLine(SimpleProbabilityHelper.SolveForP((.231m+.495m),sum));
+            Console.WriteLine(SimpleProbabilityHelper.SolveForP((13/52),(12/))));
 
 
 
