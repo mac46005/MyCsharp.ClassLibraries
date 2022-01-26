@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using DataManipulation.ClassLib.Interfaces;
 
 namespace DataManipulation.ClassLib.Services.EntityFramework{
-    public abstract class GenericDataService<T,Context> : IDataService<T>
     {
         private readonly Context _contextFactory;
         public virtual Task<T> Create(T entity)
