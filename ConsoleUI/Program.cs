@@ -20,15 +20,15 @@ namespace ConsoleUI
             /// 
             /// </summary>
             /// <returns></returns>
-            decimal sum = dataSet.Sum();
+            // decimal sum = dataSet.Sum();
 
-            decimal women = 76;
-            decimal total = 95;
+            // decimal women = 76;
+            // decimal total = 95;
 
             
 
 
-            Console.WriteLine(SimpleProbabilityHelper.SolveForP((13/52),(12/))));
+            // Console.WriteLine(SimpleProbabilityHelper.SolveForP((13/52),(12/))));
 
 
 
@@ -63,6 +63,10 @@ namespace ConsoleUI
             // descriptiveMeasuresForPopulation.PopulationMean();
             // descriptiveMeasuresForPopulation.FinitePopulationStandardDeviation();
 
+            decimal factorial = Counting.Factorial(69);
+            Console.WriteLine(factorial);
+
+            //20,748,024 /24
             Console.ReadKey();
         }
         public static decimal Divide(decimal x,decimal y) => x/y;

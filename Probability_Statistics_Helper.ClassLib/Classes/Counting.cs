@@ -34,12 +34,27 @@ namespace Probability_Statistics_Helper.ClassLib.Classes{
 
         }
 
+
+
+
         /// <summary>
         /// mCr = m! / r!(m - r)!
         /// </summary>
         /// <param name="set"></param>
-        public static void CombinationRule(List<decimal> set){
+        public static void CombinationRule(decimal m,decimal size){
+            decimal stopAt = m - size;
+            decimal currentNumber = m;
+            decimal numerator = 0;
+            decimal denominator = 0;
+            List<decimal> numArray = new List<decimal>();
+            decimal count = 0;
+            while(currentNumber != stopAt){
+                numArray.Add(currentNumber);
+                count++;
+                currentNumber++;
+            }
 
+            
         }
 
     }
